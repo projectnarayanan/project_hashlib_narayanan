@@ -1,0 +1,324 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "name": "project_hashlib.ipynb",
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Z8KVxQB-0j9j",
+        "outputId": "a064d874-5317-4a5f-d4ad-aa686fee2828"
+      },
+      "source": [
+        "def hello_func():\n",
+        "    print('Hello Shape AI')\n",
+        " \n",
+        "hello_func()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "Hello Shape AI\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "HDsE2bJn1_h5",
+        "outputId": "a08fac31-9ba2-4aeb-aeb3-9d189be63239"
+      },
+      "source": [
+        "import hashlib\n",
+        " \n",
+        "print(hashlib.algorithms_available)"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "{'sha3_384', 'sha1', 'sha512', 'sha3_224', 'sha3_256', 'sha3_512', 'shake_128', 'sha256', 'sha224', 'blake2s', 'shake_256', 'blake2b', 'sha384', 'md5'}\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "XdMvgETB2Cl7"
+      },
+      "source": [
+        "⬇️ A Small Creation \"In A program in python to generate md5 of string data\" 👇"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "eelmJzjb2MLq",
+        "outputId": "bdd4cdbc-8580-4f7a-f431-c3dc327fba4a"
+      },
+      "source": [
+        "import hashlib\n",
+        " \n",
+        "print(hashlib.md5('Shape AI YouTube Channel'.encode('UTF-8')).hexdigest())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "aad6f70a0b04a8b405e2e50d1bd3d815\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Rz4ARja53UKb",
+        "outputId": "6172b6c5-e5f4-41ca-d99f-f5a6991d4f29"
+      },
+      "source": [
+        "import hashlib\n",
+        " \n",
+        "def main():\n",
+        " \n",
+        "    text = \"Hello Harsh Akshit Bro!!\"\n",
+        "    textUtf8 = text.encode(\"utf-8\")\n",
+        " \n",
+        "    hash = hashlib.md5( textUtf8 )\n",
+        "    hexa = hash.hexdigest()\n",
+        " \n",
+        "    print (hexa)\n",
+        " \n",
+        "    return\n",
+        " \n",
+        "main()"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "4c120f421d2e4962bf7fe4d2f22c8109\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "22ttAbhz50qa",
+        "outputId": "0102d1bc-2207-43c6-9d9e-a6d93817efed"
+      },
+      "source": [
+        "import hashlib\n",
+        " \n",
+        "#using hexdigest()\n",
+        "print(hashlib.md5(\"Shape AI\".encode('utf-8')).hexdigest())\n",
+        "print(hashlib.md5(\"4c120f421d2e4962bf7fe4d2f22c8109\".encode('utf-8')).hexdigest())\n",
+        " \n",
+        "#using digest()\n",
+        "print(hashlib.md5(\"Shape AI\".encode('utf-8')).digest())\n",
+        "print(hashlib.md5(\"4c120f421d2e4962bf7fe4d2f22c8109\".encode('utf-8')).digest())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "f44755d0ced35122e2fc09bdb59cdc09\n",
+            "9c38ca930769110c19e83d8824cd3815\n",
+            "b'\\xf4GU\\xd0\\xce\\xd3Q\"\\xe2\\xfc\\t\\xbd\\xb5\\x9c\\xdc\\t'\n",
+            "b'\\x9c8\\xca\\x93\\x07i\\x11\\x0c\\x19\\xe8=\\x88$\\xcd8\\x15'\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "_t5lQxrD7b84"
+      },
+      "source": [
+        "⬇️ A Small Creations In \" Python Program to generate hashes of string data using 3 algorithms from hashlib with GreeksforGeeks\" 👇"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "R1-kiLPn-Clq"
+      },
+      "source": [
+        "1) ⬇️ md5 👇"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "P_K9wVTt8Mm4",
+        "outputId": "33068006-bd6b-4714-d624-ff5acb4dc201"
+      },
+      "source": [
+        " \n",
+        "import hashlib \n",
+        " \n",
+        " \n",
+        "# function  \n",
+        " \n",
+        "result = hashlib.md5(b'GeeksforGeeks') \n",
+        " \n",
+        "  \n",
+        "# printing the equivalent byte value. \n",
+        " \n",
+        "print(\"The byte equivalent of hash is : \", end =\"\") \n",
+        " \n",
+        "print(result.digest())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The byte equivalent of hash is : b'\\xf1\\xe0ix~\\xcetS\\x1d\\x11%Y\\x94\\\\hq'\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "UFzvMbcb-bvr"
+      },
+      "source": [
+        "2) ⬇️ sha256 👇"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "U-i0_3a89yci",
+        "outputId": "61a180a7-b701-43f8-98f5-a5272a466d12"
+      },
+      "source": [
+        "import hashlib \n",
+        " \n",
+        "  \n",
+        "# initializing string \n",
+        " \n",
+        "str = \"GeeksforGeeks\"\n",
+        " \n",
+        "  \n",
+        "# encoding GeeksforGeeks using encode() \n",
+        "# then sending to SHA256() \n",
+        " \n",
+        "result = hashlib.sha256(str.encode()) \n",
+        " \n",
+        "  \n",
+        "# printing the equivalent hexadecimal value. \n",
+        " \n",
+        "print(\"The hexadecimal equivalent of SHA256 is : \") \n",
+        " \n",
+        "print(result.hexdigest()) \n",
+        " \n",
+        "  \n",
+        " \n",
+        "print (\"\\r\")"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "The hexadecimal equivalent of SHA256 is : \n",
+            "f6071725e7ddeb434fb6b32b8ec4a2b14dd7db0d785347b2fb48f9975126178f\n",
+            "\r\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "MmYJeRQM-h0u"
+      },
+      "source": [
+        "3)⬇️ blake2s 👇"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "dnmesjieBLF-",
+        "outputId": "434ecad8-335a-40ca-8efc-ec9e07f3e7a9"
+      },
+      "source": [
+        "import hashlib \n",
+        " \n",
+        " \n",
+        "gfg = hashlib.blake2s() \n",
+        "gfg.update(b'GeeksForGeeks') \n",
+        " \n",
+        " \n",
+        "print(gfg.digest())"
+      ],
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "text": [
+            "b'\\xb6\\x88\\x94,\\x0fF*\\x02\\x163\\x9e\\x1f\\\\0 \\xaa\\x8c{\\x17\\xca\\xfc\\x14\\xc3\\xe5n\\x89\\x8e\\xbbV\\xf8\\xa1\\xdb'\n"
+          ],
+          "name": "stdout"
+        }
+      ]
+    }
+  ]
+}
